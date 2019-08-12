@@ -1,4 +1,4 @@
-# convert_DER(.crt,.cer,.der)format_to_PEM
+# Convert_DER(.crt,.cer,.der)format_to_PEM
 
 ## DER FORMAT
 The DER format is the binary format of the PEM.
@@ -13,16 +13,26 @@ The PEM format is the most common format among SSL certificates issued by certif
 - They are encoded in ASCII Base64 format
 - They are generally used for Apache servers or similar configurations
 
-## CONVERT PEM
-PEM TO DER
+## CONVERT PEM TO DER
 
 ```
 openssl x509 -outform der -in certificate.pem -out certificate.der
 ```
 
-## CONVERT PEM
-PEM TO DER
+## CONVERT DER TO CER
 
 ```
-openssl x509 -outform der -in certificate.pem -out certificate.der
+openssl x509 -inform der -in certificat-ssl.der -out certificat-ssl.cer
+```
+
+## CONVERT DER(.CER) TO PEM 
+
+```
+openssl x509 -inform der -in certificate.cer -out certificate.pem
+```
+
+## CONVERT CER TO DER
+
+```
+openssl x509 -in certificat-ssl.cer -outform der -out certificat-ssl.der
 ```
