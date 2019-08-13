@@ -1,4 +1,4 @@
-# Convert_DER(.crt,.cer,.der)format_to_PEM
+# Convert_DER('.crt','.cer','.der')format_to_PEM
 
 ## DER FORMAT
 The DER format is the binary format of the PEM.
